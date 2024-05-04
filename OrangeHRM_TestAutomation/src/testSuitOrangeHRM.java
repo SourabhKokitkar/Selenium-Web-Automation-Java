@@ -67,6 +67,23 @@ public class testSuitOrangeHRM {
 		
 	}
 	
+	@Test()
+	public void TC05_EmployeeManagement(){
+		
+		ExtentTest test = extent.createTest("Employee Management");
+		employeeManagement emp = new employeeManagement();
+		boolean status = emp.employeeManagement04();
+		
+		if(status==true) {
+			test.log(Status.PASS, "TC_05_Test to check whether user is able to open employee details by clicking on name");
+			test.pass("User able to search an employee successfully");
+		}else {
+			test.log(Status.FAIL, "TC_05_Test to check whether user is able to open employee details by clicking on name");
+			test.fail("Unable to search employee, please check Name/id");
+		}
+		
+	}
+	
 	
 	@BeforeTest
 	public void beforeTest() {

@@ -6,9 +6,10 @@
 	  <classes>
     <class name="testSuitOrangeHRM">
       <methods>
-        <include name="TC01_Login" />
+       <!-- <include name="TC01_Login" />
         <include name="TC03_EmployeeManagement" />
-        <include name="TC04_EmployeeManagement" />
+        <include name="TC04_EmployeeManagement" />--> 
+        <include name="TC05_EmployeeManagement" />
       </methods>
     </class>
   </classes>

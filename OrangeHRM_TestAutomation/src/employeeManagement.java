@@ -204,7 +204,7 @@ public class employeeManagement {
 			
 }
     
-public boolean employeeManagement04(){
+    public boolean employeeManagement04(){
 		
 		ExtentTest test = extent.createTest("Login");
 		extent.attachReporter(spark);
@@ -256,6 +256,56 @@ public boolean employeeManagement04(){
     
     
 			
-}
+    }
+    
+    public boolean employeeManagement05(){
+    	
+    	ExtentTest test = extent.createTest("Login");
+    	extent.attachReporter(spark);
+    	
+    	System.out.println("TC_05_Test to check whether user is able to open employee details by clicking on name");
+    	
+    	WebDriver driver = new ChromeDriver();
+    	
+    	driver=login.loginSteps(driver);
+    	
+    	//click Employee list button
+    	driver.findElement(By.xpath("//a[@data-automation-id='menu_pim_viewEmployeeList' and @class='top-level-menu-item']")).click();
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+       	try {
+    		Thread.sleep(6000);
+    	} catch (InterruptedException e) {
+    		// TODO Auto-generated catch block
+    		e.printStackTrace();
+    	}
+    	//select employee
+    	driver.findElement(By.xpath("//a[contains(text(),'Peter  Anderson ')]")).click();
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    	//verification
+    	try {
+    		Thread.sleep(8000);
+    	} catch (InterruptedException e) {
+    		// TODO Auto-generated catch block
+    		e.printStackTrace();
+    	}
+    	
+    	String ActualUrl=driver.getCurrentUrl();
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    	String ActualName=driver.findElement(By.xpath("//div[@class='emp-name']")).getText();
+    	System.out.println(ActualName);
+    	
+    	if (ActualUrl.contains("profile")) {
+    		driver.quit();
+    		return true;
+    		
+    	}else {
+    		
+    		driver.quit();           	
+    		return false;
+    	}
+    	
+    	
+    	
+    }
 
 }
