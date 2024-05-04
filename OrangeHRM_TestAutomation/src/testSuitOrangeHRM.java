@@ -62,7 +62,7 @@ public class testSuitOrangeHRM {
 			test.pass("User able to search an employee successfully");
 		}else {
 			test.log(Status.FAIL, "TC_04_Test to check whether user is able to search an employee by name");
-			test.fail("Unable to search employee, please check name/id");
+			test.fail("Unable to search employee, please check Name/id");
 		}
 		
 	}
