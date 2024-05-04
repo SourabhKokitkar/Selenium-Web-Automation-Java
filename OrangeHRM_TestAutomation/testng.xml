@@ -8,8 +8,9 @@
       <methods>
        <!-- <include name="TC01_Login" />
         <include name="TC03_EmployeeManagement" />
-        <include name="TC04_EmployeeManagement" />--> 
-        <include name="TC05_EmployeeManagement" />
+        <include name="TC04_EmployeeManagement" /> 
+        <include name="TC05_EmployeeManagement" />-->
+        <include name="TC06_EmployeePerformance" />
       </methods>
     </class>
   </classes>

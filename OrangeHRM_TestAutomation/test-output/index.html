@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\PRiNCE\seleniumJavaWorkspace\OrangeHRM_TestAutomation\testng.xml</span>
+                    <span>C:\Users\PRiNCE\git\repository\OrangeHRM_TestAutomation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC01_Login">TC01_Login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC03_EmployeeManagement">TC03_EmployeeManagement</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC04_EmployeeManagement">TC04_EmployeeManagement</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC06_EmployeePerformance">TC06_EmployeePerformance</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -136,23 +126,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC01_Login">
-                  </a> <!-- TC01_Login -->
-                  <span class="method-name">TC01_Login</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC03_EmployeeManagement">
-                  </a> <!-- TC03_EmployeeManagement -->
-                  <span class="method-name">TC03_EmployeeManagement</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC04_EmployeeManagement">
-                  </a> <!-- TC04_EmployeeManagement -->
-                  <span class="method-name">TC04_EmployeeManagement</span>
+                  <a name="TC06_EmployeePerformance">
+                  </a> <!-- TC06_EmployeePerformance -->
+                  <span class="method-name">TC06_EmployeePerformance</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -160,7 +136,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\PRiNCE\seleniumJavaWorkspace\OrangeHRM_TestAutomation\testng.xml</span>
+            <span class="header-content">C:\Users\PRiNCE\git\repository\OrangeHRM_TestAutomation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -171,9 +147,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;testSuitOrangeHRM&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TC01_Login&quot;/&gt;
-          &lt;include name=&quot;TC03_EmployeeManagement&quot;/&gt;
-          &lt;include name=&quot;TC04_EmployeeManagement&quot;/&gt;
+          &lt;include name=&quot;TC06_EmployeePerformance&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- testSuitOrangeHRM --&gt;
     &lt;/classes&gt;
@@ -215,24 +189,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC03_EmployeeManagement')
+data.setCell(0, 1, 'TC06_EmployeePerformance')
 data.setCell(0, 2, 'testSuitOrangeHRM')
-data.setCell(0, 3, 84054);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC04_EmployeeManagement')
-data.setCell(1, 2, 'testSuitOrangeHRM')
-data.setCell(1, 3, 42321);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC01_Login')
-data.setCell(2, 2, 'testSuitOrangeHRM')
-data.setCell(2, 3, 23245);
+data.setCell(0, 3, 80755);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -247,9 +213,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testSuitOrangeHRM</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TC04_EmployeeManagement</span>
+                <br/>
+                <span class="ignored-method-name">TC03_EmployeeManagement</span>
+                <br/>
+                <span class="ignored-method-name">TC01_Login</span>
+                <br/>
+                <span class="ignored-method-name">TC05_EmployeeManagement</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -264,20 +243,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">TC01_Login</span>
-                <span class="method-start">215 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC03_EmployeeManagement</span>
-                <span class="method-start">23463 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC04_EmployeeManagement</span>
-                <span class="method-start">107520 ms</span>
+                <span class="method-name">TC06_EmployeePerformance</span>
+                <span class="method-start">201 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">149845 ms</span>
+                <span class="method-start">80962 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

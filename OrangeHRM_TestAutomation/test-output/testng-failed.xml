@@ -6,8 +6,8 @@
       <class name="testSuitOrangeHRM">
         <methods>
           <include name="afterTest"/>
-          <include name="TC03_EmployeeManagement"/>
           <include name="beforeTest"/>
+          <include name="TC06_EmployeePerformance"/>
         </methods>
       </class> <!-- testSuitOrangeHRM -->
     </classes>

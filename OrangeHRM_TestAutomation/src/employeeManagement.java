@@ -294,7 +294,7 @@ public class employeeManagement {
     	String ActualName=driver.findElement(By.xpath("//div[@class='emp-name']")).getText();
     	System.out.println(ActualName);
     	
-    	if (ActualUrl.contains("profile")) {
+    	if (ActualUrl.contains("profile") && ActualName.contains("Peter Anderson")) {
     		driver.quit();
     		return true;
     		
