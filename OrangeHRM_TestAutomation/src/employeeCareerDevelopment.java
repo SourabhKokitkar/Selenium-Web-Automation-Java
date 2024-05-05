@@ -21,7 +21,7 @@ public class employeeCareerDevelopment {
 	ExtentSparkReporter spark = new ExtentSparkReporter("extentReport.html");
 	ExtentReports extent = new ExtentReports();
 	
-	loginTests login = new loginTests();
+	employeeLogin login = new employeeLogin();
 	
 public boolean employeeCareerDevelopment08(){
     	

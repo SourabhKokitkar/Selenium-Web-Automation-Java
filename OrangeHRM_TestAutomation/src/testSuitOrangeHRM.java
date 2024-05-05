@@ -10,17 +10,15 @@ import org.testng.annotations.AfterTest;
 
 public class testSuitOrangeHRM {
 	
-	// directory where output is to be printed
 	ExtentSparkReporter spark = new ExtentSparkReporter("extentReport.html");
 	ExtentReports extent = new ExtentReports();
 	
 
-	@Test()
+	@Test(groups = {"Sanity","Login"})
 	public void TC01_Login(){
 		
-		ExtentTest test = extent.createTest("Login");
-//		Reporter.log("TC_01_Test to check whether user is able to login succefully after entering appropriate username and password.",true);
-		loginTests login = new loginTests();
+		ExtentTest test = extent.createTest("TC_01_Employee Login");
+		employeeLogin login = new employeeLogin();
 		boolean status = login.login01();
 		
 		if(status==true) {
@@ -33,11 +31,11 @@ public class testSuitOrangeHRM {
 				
 	}
 	
-	@Test()
+	@Test(groups = {"Sanity","Login"})
 	public void TC02_Login(){
 		
-		ExtentTest test = extent.createTest("Login");
-		loginTests login = new loginTests();
+		ExtentTest test = extent.createTest("TC_02_Login");
+		employeeLogin login = new employeeLogin();
 		boolean status = login.login02();
 		
 		if(status==true) {
@@ -50,10 +48,10 @@ public class testSuitOrangeHRM {
 		
 	}
 	
-	@Test()
+	@Test(groups = {"Sanity","Employee Management"})
 	public void TC03_EmployeeManagement(){
 		
-		ExtentTest test = extent.createTest("Employee Management");
+		ExtentTest test = extent.createTest("TC_03_Employee Management");
 		employeeManagement emp = new employeeManagement();
 		boolean status = emp.employeeManagement03();
 		
@@ -67,10 +65,10 @@ public class testSuitOrangeHRM {
 				
 	}
 	
-	@Test()
+	@Test(groups = {"Sanity","Employee Management"})
 	public void TC04_EmployeeManagement(){
 		
-		ExtentTest test = extent.createTest("Employee Management");
+		ExtentTest test = extent.createTest("TC_04_Employee Management");
 		employeeManagement emp = new employeeManagement();
 		boolean status = emp.employeeManagement04();
 		
@@ -84,10 +82,10 @@ public class testSuitOrangeHRM {
 		
 	}
 	
-	@Test()
+	@Test(groups = {"Sanity","Employee Management"})
 	public void TC05_EmployeeManagement(){
 		
-		ExtentTest test = extent.createTest("Employee Management");
+		ExtentTest test = extent.createTest("TC_05_Employee Management");
 		employeeManagement emp = new employeeManagement();
 		boolean status = emp.employeeManagement05();
 		
@@ -101,10 +99,10 @@ public class testSuitOrangeHRM {
 		
 	}
 	
-	@Test()
+	@Test(groups = {"Sanity","Employee Performance"})
 	public void TC06_EmployeePerformance(){
 		
-		ExtentTest test = extent.createTest("Employee Performance");
+		ExtentTest test = extent.createTest("TC_06_Employee Performance");
 		employeePerformance emp = new employeePerformance();
 		boolean status = emp.employeePerformance06();
 		
@@ -119,10 +117,10 @@ public class testSuitOrangeHRM {
 	}
 	
 	
-	@Test()
+	@Test(groups = {"Sanity","Employee Performance"})
 	public void TC07_EmployeePerformance(){
 		
-		ExtentTest test = extent.createTest("Employee Performance");
+		ExtentTest test = extent.createTest("TC_07_Employee Performance");
 		employeePerformance emp = new employeePerformance();
 		boolean status = emp.employeePerformance07();
 		
@@ -137,10 +135,10 @@ public class testSuitOrangeHRM {
 	}
 	
 	
-	@Test()
+	@Test(groups = {"Sanity","Employee Career Development"})
 	public void TC08_EmployeeCareerDevelopment(){
 		
-		ExtentTest test = extent.createTest("Employee Performance");
+		ExtentTest test = extent.createTest("TC_08_Employee Career Development");
 		employeeCareerDevelopment emp = new employeeCareerDevelopment();
 		boolean status = emp.employeeCareerDevelopment08();
 		
@@ -155,10 +153,10 @@ public class testSuitOrangeHRM {
 	}
 	
 	
-	@Test()
+	@Test(groups = {"Sanity","Employee RequestDesk"})
 	public void TC09_EmployeeRequestDesk(){
 		
-		ExtentTest test = extent.createTest("Employee Performance");
+		ExtentTest test = extent.createTest("TC_09_Employee RequestDesk");
 		employeeRequestDesk emp = new employeeRequestDesk();
 		boolean status = emp.employeeRequestDesk09();
 		
@@ -172,10 +170,10 @@ public class testSuitOrangeHRM {
 		
 	}
 	
-	@Test()
-	public void TC10_employeeRecruitment(){
+	@Test(groups = {"Sanity","Employee Recruitment"})
+	public void TC10_EmployeeRecruitment(){
 		
-		ExtentTest test = extent.createTest("Employee Performance");
+		ExtentTest test = extent.createTest("TC_10_Employee Recruitment");
 		employeeRecruitment emp = new employeeRecruitment();
 		boolean status = emp.employeeRecruitment10();
 		
@@ -199,9 +197,5 @@ public class testSuitOrangeHRM {
 	public void  afterTest() {
 		extent.flush();
 	}
-	
-	
-
-	
  
 }

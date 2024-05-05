@@ -22,7 +22,7 @@ public class employeeManagement {
 	ExtentSparkReporter spark = new ExtentSparkReporter("extentReport.html");
 	ExtentReports extent = new ExtentReports();
 	
-	loginTests login = new loginTests();
+	employeeLogin login = new employeeLogin();
 	
     public boolean employeeManagement03(){
 		

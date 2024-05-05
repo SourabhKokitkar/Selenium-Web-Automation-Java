@@ -14,7 +14,7 @@ import java.time.Duration;
 import org.junit.Test;
 
 
-public class loginTests {
+public class employeeLogin {
 	
 	ExtentSparkReporter spark = new ExtentSparkReporter("extentReport.html");
 	ExtentReports extent = new ExtentReports();

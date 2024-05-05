@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>6 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">9 methods, 1 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC06_EmployeePerformance">TC06_EmployeePerformance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,42 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC10_employeeRecruitment">TC10_employeeRecruitment</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC01_Login">TC01_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC02_Login">TC02_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC03_EmployeeManagement">TC03_EmployeeManagement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC04_EmployeeManagement">TC04_EmployeeManagement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC05_EmployeeManagement">TC05_EmployeeManagement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC07_EmployeePerformance">TC07_EmployeePerformance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC08_EmployeeCareerDevelopment">TC08_EmployeeCareerDevelopment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testSuitOrangeHRM" class="method navigator-link" hash-for-method="TC09_EmployeeRequestDesk">TC09_EmployeeRequestDesk</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -118,6 +167,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testSuitOrangeHRM</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC06_EmployeePerformance">
+                  </a> <!-- TC06_EmployeePerformance -->
+                  <span class="method-name">TC06_EmployeePerformance</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@data-rating-text=&apos;4.5&apos;])[1]&quot;}
+  (Session info: chrome=124.0.6367.119)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [438195491309a67c0a48f9e226a6a2e0, findElement {value=(//a[@data-rating-text=&apos;4.5&apos;])[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\PRiNCE\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63281}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63281/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 438195491309a67c0a48f9e226a6a2e0
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at employeePerformance.employeePerformance06(employeePerformance.java:162)
+	at testSuitOrangeHRM.TC06_EmployeePerformance(testSuitOrangeHRM.java:107)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -126,9 +215,58 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC10_employeeRecruitment">
-                  </a> <!-- TC10_employeeRecruitment -->
-                  <span class="method-name">TC10_employeeRecruitment</span>
+                  <a name="TC01_Login">
+                  </a> <!-- TC01_Login -->
+                  <span class="method-name">TC01_Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC02_Login">
+                  </a> <!-- TC02_Login -->
+                  <span class="method-name">TC02_Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC03_EmployeeManagement">
+                  </a> <!-- TC03_EmployeeManagement -->
+                  <span class="method-name">TC03_EmployeeManagement</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC04_EmployeeManagement">
+                  </a> <!-- TC04_EmployeeManagement -->
+                  <span class="method-name">TC04_EmployeeManagement</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC05_EmployeeManagement">
+                  </a> <!-- TC05_EmployeeManagement -->
+                  <span class="method-name">TC05_EmployeeManagement</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC07_EmployeePerformance">
+                  </a> <!-- TC07_EmployeePerformance -->
+                  <span class="method-name">TC07_EmployeePerformance</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC08_EmployeeCareerDevelopment">
+                  </a> <!-- TC08_EmployeeCareerDevelopment -->
+                  <span class="method-name">TC08_EmployeeCareerDevelopment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC09_EmployeeRequestDesk">
+                  </a> <!-- TC09_EmployeeRequestDesk -->
+                  <span class="method-name">TC09_EmployeeRequestDesk</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,6 +285,15 @@
     &lt;classes&gt;
       &lt;class name=&quot;testSuitOrangeHRM&quot;&gt;
         &lt;methods&gt;
+          &lt;include name=&quot;TC01_Login&quot;/&gt;
+          &lt;include name=&quot;TC02_Login&quot;/&gt;
+          &lt;include name=&quot;TC03_EmployeeManagement&quot;/&gt;
+          &lt;include name=&quot;TC04_EmployeeManagement&quot;/&gt;
+          &lt;include name=&quot;TC05_EmployeeManagement&quot;/&gt;
+          &lt;include name=&quot;TC06_EmployeePerformance&quot;/&gt;
+          &lt;include name=&quot;TC07_EmployeePerformance&quot;/&gt;
+          &lt;include name=&quot;TC08_EmployeeCareerDevelopment&quot;/&gt;
+          &lt;include name=&quot;TC09_EmployeeRequestDesk&quot;/&gt;
           &lt;include name=&quot;TC10_employeeRecruitment&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- testSuitOrangeHRM --&gt;
@@ -173,6 +320,102 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Employee Career Development</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC08_EmployeeCareerDevelopment</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Employee Management</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC03_EmployeeManagement</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC04_EmployeeManagement</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC05_EmployeeManagement</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Employee Performance</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC06_EmployeePerformance</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC07_EmployeePerformance</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Employee RequestDesk</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC09_EmployeeRequestDesk</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Login</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC01_Login</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC02_Login</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC01_Login</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC02_Login</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC03_EmployeeManagement</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC04_EmployeeManagement</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC05_EmployeeManagement</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC06_EmployeePerformance</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC07_EmployeePerformance</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC08_EmployeeCareerDevelopment</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC09_EmployeeRequestDesk</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -189,16 +432,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC10_employeeRecruitment')
+data.setCell(0, 1, 'TC03_EmployeeManagement')
 data.setCell(0, 2, 'testSuitOrangeHRM')
-data.setCell(0, 3, 49316);
+data.setCell(0, 3, 80487);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC06_EmployeePerformance')
+data.setCell(1, 2, 'testSuitOrangeHRM')
+data.setCell(1, 3, 76021);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC09_EmployeeRequestDesk')
+data.setCell(2, 2, 'testSuitOrangeHRM')
+data.setCell(2, 3, 54110);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC08_EmployeeCareerDevelopment')
+data.setCell(3, 2, 'testSuitOrangeHRM')
+data.setCell(3, 3, 40997);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TC07_EmployeePerformance')
+data.setCell(4, 2, 'testSuitOrangeHRM')
+data.setCell(4, 3, 34416);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TC05_EmployeeManagement')
+data.setCell(5, 2, 'testSuitOrangeHRM')
+data.setCell(5, 3, 34166);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TC04_EmployeeManagement')
+data.setCell(6, 2, 'testSuitOrangeHRM')
+data.setCell(6, 3, 33073);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TC01_Login')
+data.setCell(7, 2, 'testSuitOrangeHRM')
+data.setCell(7, 3, 18367);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC02_Login')
+data.setCell(8, 2, 'testSuitOrangeHRM')
+data.setCell(8, 3, 10982);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 49 seconds</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -213,29 +488,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">testSuitOrangeHRM</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC05_EmployeeManagement</span>
-                <br/>
-                <span class="ignored-method-name">TC02_Login</span>
-                <br/>
-                <span class="ignored-method-name">TC01_Login</span>
-                <br/>
-                <span class="ignored-method-name">TC03_EmployeeManagement</span>
-                <br/>
-                <span class="ignored-method-name">TC04_EmployeeManagement</span>
-                <br/>
-                <span class="ignored-method-name">TC08_EmployeeCareerDevelopment</span>
-                <br/>
-                <span class="ignored-method-name">TC09_EmployeeRequestDesk</span>
-                <br/>
-                <span class="ignored-method-name">TC07_EmployeePerformance</span>
-                <br/>
-                <span class="ignored-method-name">TC06_EmployeePerformance</span>
+                <span class="ignored-method-name">TC10_EmployeeRecruitment</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -253,12 +512,46 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">TC10_employeeRecruitment</span>
-                <span class="method-start">189 ms</span>
+                <span class="method-name">TC01_Login</span>
+                <span class="method-start">197 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC02_Login</span>
+                <span class="method-start">18569 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC03_EmployeeManagement</span>
+                <span class="method-start">29554 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC04_EmployeeManagement</span>
+                <span class="method-start">110043 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC05_EmployeeManagement</span>
+                <span class="method-start">143119 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC06_EmployeePerformance</span>
+                <span class="method-start">177286 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC07_EmployeePerformance</span>
+                <span class="method-start">253312 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC08_EmployeeCareerDevelopment</span>
+                <span class="method-start">287730 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC09_EmployeeRequestDesk</span>
+                <span class="method-start">328728 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">49511 ms</span>
+                <span class="method-start">382841 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -24,7 +24,7 @@ public class employeePerformance {
 	ExtentSparkReporter spark = new ExtentSparkReporter("extentReport.html");
 	ExtentReports extent = new ExtentReports();
 	
-	loginTests login = new loginTests();
+	employeeLogin login = new employeeLogin();
 	
 	public boolean employeePerformance06(){
     	
@@ -72,7 +72,7 @@ public class employeePerformance {
     	driver.switchTo().frame(iframe);
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	
-    	driver.findElement(By.xpath("//input[@name='employeeAppraisal[emp_name][empName]']")).sendKeys("da");
+    	driver.findElement(By.xpath("//input[@name='employeeAppraisal[emp_name][empName]']")).sendKeys("k");
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	try {
     		Thread.sleep(5000);
