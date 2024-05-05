@@ -196,5 +196,58 @@ public class employeePerformance {
     	
     	
     }
+	
+	public boolean employeePerformance07(){
+    	
+    	ExtentTest test = extent.createTest("Login");
+    	extent.attachReporter(spark);
+    	
+    	System.out.println("TC_07_Test to check whether user is able to initiate appraisal for an employee");
+    	
+    	WebDriver driver = new ChromeDriver();
+    	
+    	driver=login.loginSteps(driver);
+    	
+    	//click on performance
+    	    	
+    	driver.findElement(By.xpath("//li[@id='left_menu_item_18']//a[1]//span[1]")).click();
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+       	try {
+    		Thread.sleep(6000);
+    	} catch (InterruptedException e) {
+    		// TODO Auto-generated catch block
+    		e.printStackTrace();
+    	}
+       	//view appraisal
+       	driver.findElement(By.xpath("//a[@data-automation-id='menu_performance_viewMyAppraisals']")).click();
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+    	driver.findElement(By.xpath("//td//span[normalize-space()='Aaron Hamilton']")).click();
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+       	
+       	try {
+    		Thread.sleep(6000);
+    	} catch (InterruptedException e) {
+    		// TODO Auto-generated catch block
+    		e.printStackTrace();
+    	}
+       	//switch iframe
+    	WebElement iframe = driver.findElement(By.xpath("//iframe[@id='noncoreIframe']"));
+    	driver.switchTo().frame(iframe);
+       	//fetch ratings
+		String actualRating=driver.findElement(By.xpath("//div[@id='finalRatingValue']")).getText();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        
+		float rating=Float.parseFloat(actualRating);
+		
+        if (rating>=0 && rating<=5.0 ) {
+            driver.quit();
+            return true;
 
+        }else {
+            
+        	driver.quit();           	
+	        return false;
+        }
+
+	}
 }

@@ -187,7 +187,7 @@ public class employeeManagement {
 			e.printStackTrace();
 		}
 		String emp_name=driver.findElement(By.xpath("//div[@class='emp-name']")).getText();
-		System.out.println(emp_name);
+//		System.out.println(emp_name);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         
         if (emp_name.contains("Tony Howard Stark")) {
@@ -292,7 +292,7 @@ public class employeeManagement {
     	String ActualUrl=driver.getCurrentUrl();
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	String ActualName=driver.findElement(By.xpath("//div[@class='emp-name']")).getText();
-    	System.out.println(ActualName);
+//    	System.out.println(ActualName);
     	
     	if (ActualUrl.contains("profile") && ActualName.contains("Peter Anderson")) {
     		driver.quit();

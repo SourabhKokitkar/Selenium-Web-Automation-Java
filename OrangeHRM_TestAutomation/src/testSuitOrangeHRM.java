@@ -34,6 +34,23 @@ public class testSuitOrangeHRM {
 	}
 	
 	@Test()
+	public void TC02_Login(){
+		
+		ExtentTest test = extent.createTest("Login");
+		loginTests login = new loginTests();
+		boolean status = login.login02();
+		
+		if(status==true) {
+			test.log(Status.PASS, "TC_02_Test to check whether user is able to login after entering incorrect username and password.");
+			test.pass("User prompted with an error message ");
+		}else {
+			test.log(Status.FAIL, "TC_02_Test to check whether user is able to login after entering incorrect username and password.");
+			test.fail("User able to login");
+		}
+		
+	}
+	
+	@Test()
 	public void TC03_EmployeeManagement(){
 		
 		ExtentTest test = extent.createTest("Employee Management");
@@ -97,6 +114,77 @@ public class testSuitOrangeHRM {
 		}else {
 			test.log(Status.FAIL, "TC_06_Test to check whether user is able to initiate appraisal for an employee");
 			test.fail("Unable to initiate appraisal process");
+		}
+		
+	}
+	
+	
+	@Test()
+	public void TC07_EmployeePerformance(){
+		
+		ExtentTest test = extent.createTest("Employee Performance");
+		employeePerformance emp = new employeePerformance();
+		boolean status = emp.employeePerformance07();
+		
+		if(status==true) {
+			test.log(Status.PASS, "TC_07_Test to check whether user is able to initiate appraisal for an employee");
+			test.pass("User able to view appraisal ratings for employee successfully");
+		}else {
+			test.log(Status.FAIL, "TC_07_Test to check whether user is able to initiate appraisal for an employee");
+			test.fail("Unable to view appraisal details");
+		}
+		
+	}
+	
+	
+	@Test()
+	public void TC08_EmployeeCareerDevelopment(){
+		
+		ExtentTest test = extent.createTest("Employee Performance");
+		employeeCareerDevelopment emp = new employeeCareerDevelopment();
+		boolean status = emp.employeeCareerDevelopment08();
+		
+		if(status==true) {
+			test.log(Status.PASS, "TC_08_Test to check whether user is able to view list of employees having career development plan");
+			test.pass("User successfully able to view employee list who have career development plan");
+		}else {
+			test.log(Status.FAIL, "TC_08_Test to check whether user is able to view list of employees having career development plan");
+			test.fail("Unable to view employee list who have career development plan");
+		}
+		
+	}
+	
+	
+	@Test()
+	public void TC09_EmployeeRequestDesk(){
+		
+		ExtentTest test = extent.createTest("Employee Performance");
+		employeeRequestDesk emp = new employeeRequestDesk();
+		boolean status = emp.employeeRequestDesk09();
+		
+		if(status==true) {
+			test.log(Status.PASS, "TC_09_Test to check whether user is able to submit resignation request with urgent priority");
+			test.pass("User successfully able submit resignation request");
+		}else {
+			test.log(Status.FAIL, "TC_09_Test to check whether user is able to submit resignation request with urgent priority");
+			test.fail("Unable to submit resignation request");
+		}
+		
+	}
+	
+	@Test()
+	public void TC10_employeeRecruitment(){
+		
+		ExtentTest test = extent.createTest("Employee Performance");
+		employeeRecruitment emp = new employeeRecruitment();
+		boolean status = emp.employeeRecruitment10();
+		
+		if(status==true) {
+			test.log(Status.PASS, "TC_10_Test to check whether user is able to hire the shortlisted candidate");
+			test.pass("User successfully able hire shortlisted candidate");
+		}else {
+			test.log(Status.FAIL, "TC_10_Test to check whether user is able to hire the shortlisted candidate");
+			test.fail("Unable to hire shortlisted candidate");
 		}
 		
 	}

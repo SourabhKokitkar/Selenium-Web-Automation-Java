@@ -26,11 +26,11 @@ public class loginTests {
         driver.manage().window().maximize();
         
         
-        driver.get("https://orangeuser01-trials712.orangehrmlive.com/");
+        driver.get("https://orangeuser123-trials712.orangehrmlive.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
         driver.findElement(By.xpath("//input[@name='txtUsername']")).sendKeys("admin");
-        driver.findElement(By.xpath("//input[@name='txtPassword']")).sendKeys("AVo@9ta2FF");
+        driver.findElement(By.xpath("//input[@name='txtPassword']")).sendKeys("YfWP0@Brd9");
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
@@ -73,6 +73,45 @@ public class loginTests {
         	
 	        return false;
         }
+	}
+	
+public boolean login02(){
+		
+		ExtentTest test = extent.createTest("Login");
+		extent.attachReporter(spark);
+		
+		System.out.println("TC_02_Test to check whether user is able to login after entering incorrect username and password.");
+		
+		WebDriver driver = new ChromeDriver();
+//		driver=loginSteps(driver);
+		
+		driver.manage().window().maximize();
+        
+        
+        driver.get("https://orangeuser123-trials712.orangehrmlive.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        
+        driver.findElement(By.xpath("//input[@name='txtUsername']")).sendKeys("admin");
+        driver.findElement(By.xpath("//input[@name='txtPassword']")).sendKeys("YfWP0@Brd9.");
+
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+//        String url1 = driver.getCurrentUrl();
+		String actualPrompt=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        
+        if (actualPrompt.contains("Invalid Credentials")) {
+            driver.quit();
+            return true;
+
+        }else {
+            
+        	driver.quit();           	
+	        return false;
+        }
+        
 	}
         
 }
