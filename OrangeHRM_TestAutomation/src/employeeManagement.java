@@ -1,4 +1,8 @@
 import org.openqa.selenium.By;
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import org.openqa.selenium.support.ui.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +13,9 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+import Variables.configProperties;
+
 import com.aventstack.extentreports.*;
 
 import java.time.Duration;
@@ -23,6 +30,15 @@ public class employeeManagement {
 	ExtentReports extent = new ExtentReports();
 	
 	employeeLogin login = new employeeLogin();
+	
+	public static String dateManipulation(int addMonth) {
+		
+		DateFormat dateFormat = new SimpleDateFormat("Y-dd-MM");
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.MONTH, addMonth);
+		String result = dateFormat.format(cal.getTime());
+		return result;
+	}
 	
     public boolean employeeManagement03(){
 		
@@ -52,17 +68,18 @@ public class employeeManagement {
 		driver.switchTo().defaultContent();
 		
 		//Enter Firstname
-		driver.findElement(By.xpath("//input[@id='first-name-box']")).sendKeys("Tony");
+		driver.findElement(By.xpath("//input[@id='first-name-box']")).sendKeys(configProperties.property.getProperty("FirstName1"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//Enter Middlename
-		driver.findElement(By.xpath("//input[@id='middle-name-box']")).sendKeys("Howard");
+		driver.findElement(By.xpath("//input[@id='middle-name-box']")).sendKeys(configProperties.property.getProperty("MiddleName1"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//Enter Lastname
-		driver.findElement(By.xpath("//input[@id='last-name-box']")).sendKeys("Stark");
+		driver.findElement(By.xpath("//input[@id='last-name-box']")).sendKeys(configProperties.property.getProperty("LastName1"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//Enter joined date
-		driver.findElement(By.xpath("//input[@id='joinedDate']")).clear();
-		driver.findElement(By.xpath("//input[@id='joinedDate']")).sendKeys("2024-05-02");
+		driver.findElement(By.xpath("//button[@class='btn date-picker-button']")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.findElement(By.xpath("//div[@class='picker__day picker__day--infocus' and text()='1']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//Selecting Location
 		driver.findElement(By.xpath("//div[@class='input-group-append']//i[@class='material-icons' and text()='arrow_drop_down']")).click();
@@ -80,15 +97,16 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath("//div[@class='input-field col s12 m12 l4']//input[@id='ssn']")).sendKeys("123456789012");
+		driver.findElement(By.xpath("//div[@class='input-field col s12 m12 l4']//input[@id='ssn']")).sendKeys(configProperties.property.getProperty("AadharSSN"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-		driver.findElement(By.xpath("//input[@id='emp_birthday']")).sendKeys("1999-05-01");
+		driver.findElement(By.xpath("//input[@id='emp_birthday']")).sendKeys(configProperties.property.getProperty("Emp_DOB"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		//Marital Status
 		driver.findElement(By.xpath("//div[@id='emp_marital_status_inputfileddiv']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.findElement(By.xpath("//span[normalize-space()='Married']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
 //		WebElement w1=driver.findElement(By.xpath("//div[@id='emp_marital_status_inputfileddiv']"));
 //		Select dropdown1=new Select(w1);
 //		dropdown1.selectByVisibleText("Single");
@@ -118,9 +136,15 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath("//input[@id='probation_end_date']")).sendKeys("2024-06-04");
+		driver.findElement(By.xpath("//input[@id='probation_end_date']/ancestor::div[@name='dateForm']//button[@class='btn date-picker-button']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.findElement(By.xpath("//input[@id='date_of_permanency']")).sendKeys("2024-11-04");
+		driver.findElement(By.xpath("//input[@id='probation_end_date']/ancestor::div[@name='dateForm']//div[@class='picker__day picker__day--infocus' and text()='28']")).click();//apply date logic
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.findElement(By.xpath("//input[@id='date_of_permanency']/ancestor::div[@name='dateForm']//button[@class='btn date-picker-button']")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.findElement(By.xpath("//input[@id='date_of_permanency']/ancestor::div[@name='dateForm']//div[@title='Next month']")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.findElement(By.xpath("(//input[@id='date_of_permanency']/ancestor::div[@name='dateForm']//div[@role='gridcell' and text()='1'])[1]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//Job title
 		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@role='combobox']")).click();
@@ -145,11 +169,20 @@ public class employeeManagement {
 		//comments
 		driver.findElement(By.xpath("//textarea[@id='comment']")).sendKeys("This is Full time QA professional");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		//Contract Start Date
-		driver.findElement(By.xpath("//input[@id='contract_start_date']")).sendKeys("2024-05-04");
+		
+		//Date formatting for contract start and end date
+		DateFormat dateFormat = new SimpleDateFormat("Y-dd-MM");
+		Date date = new Date();
+		
+		//Contract Start Date		
+		String currentDate = dateFormat.format(date);
+//		System.out.println(currentDate);
+		driver.findElement(By.xpath("//input[@id='contract_start_date']")).sendKeys(currentDate);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//Contract End Date
-		driver.findElement(By.xpath("//input[@id='contract_end_date']")).sendKeys("2026-05-04");
+		String endDate = dateManipulation(12);
+//		System.out.println(endDate);
+		driver.findElement(By.xpath("//input[@id='contract_end_date']")).sendKeys(endDate);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//Next button
 		driver.findElement(By.xpath("//button[normalize-space()='Next']")).click();
@@ -190,7 +223,13 @@ public class employeeManagement {
 //		System.out.println(emp_name);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         
-        if (emp_name.contains("Tony Howard Stark")) {
+		String fname = configProperties.property.getProperty("FirstName1");
+		String mname = configProperties.property.getProperty("MiddleName1");
+		String lname = configProperties.property.getProperty("LastName1");
+		String name = fname + " " + mname + " " + lname;
+		
+		
+        if (emp_name.contains(name)) {
             driver.quit();
             return true;
 
@@ -219,7 +258,7 @@ public class employeeManagement {
 		driver.findElement(By.xpath("//a[@data-automation-id='menu_pim_viewEmployeeList' and @class='top-level-menu-item']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
 		//search bar
-		driver.findElement(By.xpath("//input[@id='employee_name_quick_filter_employee_list_value']")).sendKeys("br");
+		driver.findElement(By.xpath("//input[@id='employee_name_quick_filter_employee_list_value']")).sendKeys(configProperties.property.getProperty("EmpInitials1"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		driver.findElement(By.xpath("//i[@id='quick_search_icon']")).click();

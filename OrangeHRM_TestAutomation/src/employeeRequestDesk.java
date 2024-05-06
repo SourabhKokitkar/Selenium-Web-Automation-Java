@@ -9,7 +9,12 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.*;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import org.junit.Test;
@@ -22,6 +27,15 @@ import java.util.regex.*;
 		ExtentReports extent = new ExtentReports();
 		
 		employeeLogin login = new employeeLogin();
+		
+		public static String dateManipulation(int addDays) {
+			
+			DateFormat dateFormat = new SimpleDateFormat("Y-MM-dd");
+			Calendar cal = Calendar.getInstance();
+			cal.add(Calendar.DATE, addDays);
+			String result = dateFormat.format(cal.getTime());
+			return result;
+		}
 		
 		
 		public boolean employeeRequestDesk09(){
@@ -78,11 +92,18 @@ import java.util.regex.*;
 	       	//Reason
 	       	driver.findElement(By.xpath("//textarea[@id='description']")).sendKeys("This is a dummy description");
 	       	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	 
-	       	//resolution date
-	       	driver.findElement(By.xpath("//input[@id='resolutionDate']")).sendKeys("2024-05-17");
+	       	
+			//Date formatting for resolution and resignation date
+			DateFormat dateFormat = new SimpleDateFormat("Y-MM-dd");
+			Date date = new Date();
+			
+	       	//resolution date	       	
+			String resolutionDate = dateManipulation(7);
+	       	driver.findElement(By.xpath("//input[@id='resolutionDate']")).sendKeys(resolutionDate); 
 	       	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	 
 	       	//resignation date
-	       	driver.findElement(By.xpath("//input[@id='1']")).sendKeys("2024-05-24");
+	       	String resignationDate = dateManipulation(14);
+	       	driver.findElement(By.xpath("//input[@id='1']")).sendKeys(resignationDate);
 	       	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	  
 	       	
 	       	//submit

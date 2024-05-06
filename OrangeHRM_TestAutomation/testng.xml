@@ -3,16 +3,17 @@
 <suite name="Suite">
 	
   <test thread-count="5" name="Test">
-	  <!--
-	  <groups>
+	  
+	  <!--<groups>
 		  <run>
 			  <include name = "Sanity" />
 		  </run>
-	  </groups>
-	  -->
+	  </groups>-->
+	  
 	<classes>
     <class name="testSuitOrangeHRM">
       <methods>
+		  
        	<include name="TC01_Login" />
         <include name="TC02_Login" />
         <include name="TC03_EmployeeManagement" />
@@ -22,7 +23,8 @@
         <include name="TC07_EmployeePerformance" />
         <include name="TC08_EmployeeCareerDevelopment" />
         <include name="TC09_EmployeeRequestDesk" />
-        <include name="TC10_employeeRecruitment" />
+        <include name="TC10_EmployeeRecruitment" /> 
+        
       </methods>
       
       

@@ -9,6 +9,9 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+import Variables.configProperties;
+
 import com.aventstack.extentreports.*;
 
 import java.time.Duration;
@@ -72,7 +75,7 @@ public class employeePerformance {
     	driver.switchTo().frame(iframe);
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	
-    	driver.findElement(By.xpath("//input[@name='employeeAppraisal[emp_name][empName]']")).sendKeys("k");
+    	driver.findElement(By.xpath("//input[@name='employeeAppraisal[emp_name][empName]']")).sendKeys(configProperties.property.getProperty("EmpInitials2"));
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	try {
     		Thread.sleep(5000);
@@ -96,7 +99,7 @@ public class employeePerformance {
     	//from
     	driver.findElement(By.xpath("//input[@id='date_from']")).click();
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-    	driver.findElement(By.xpath("//div[@id='date_from_root']//div[@aria-label='2024-05-01']")).click(); //apply date logic here
+    	driver.findElement(By.xpath("//table[@id='date_from_table']//div[@class='picker__day picker__day--infocus' and text()='1']")).click(); 
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	//to
     	driver.findElement(By.xpath("//input[@id='date_to']")).click();
@@ -114,7 +117,7 @@ public class employeePerformance {
     		i++;
     	}while(i<3);
 
-    	driver.findElement(By.xpath("//table[@id='date_to_table']//div[@class='picker__day picker__day--infocus' and text()='27']")).click(); //apply date logic here
+    	driver.findElement(By.xpath("//table[@id='date_to_table']//div[@class='picker__day picker__day--infocus' and text()='27']")).click();
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	//due date
     	driver.findElement(By.xpath("//input[@id='date_due']")).click();
@@ -202,7 +205,7 @@ public class employeePerformance {
     	ExtentTest test = extent.createTest("Login");
     	extent.attachReporter(spark);
     	
-    	System.out.println("TC_07_Test to check whether user is able to initiate appraisal for an employee");
+    	System.out.println("TC_07_Test to check whether user is able to view own appraisal info");
     	
     	WebDriver driver = new ChromeDriver();
     	

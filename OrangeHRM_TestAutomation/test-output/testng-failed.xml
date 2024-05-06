@@ -5,9 +5,10 @@
     <classes>
       <class name="testSuitOrangeHRM">
         <methods>
+          <include name="TC09_EmployeeRequestDesk"/>
           <include name="afterTest"/>
+          <include name="beforeClass"/>
           <include name="beforeTest"/>
-          <include name="TC06_EmployeePerformance"/>
         </methods>
       </class> <!-- testSuitOrangeHRM -->
     </classes>

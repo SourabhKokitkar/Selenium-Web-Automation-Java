@@ -1,8 +1,14 @@
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+import Variables.configProperties;
+
 import com.aventstack.extentreports.*;
 import org.testng.annotations.BeforeClass;
+
+import java.io.IOException;
+
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
@@ -125,10 +131,10 @@ public class testSuitOrangeHRM {
 		boolean status = emp.employeePerformance07();
 		
 		if(status==true) {
-			test.log(Status.PASS, "TC_07_Test to check whether user is able to initiate appraisal for an employee");
+			test.log(Status.PASS, "TC_07_Test to check whether user is able to view own appraisal info");
 			test.pass("User able to view appraisal ratings for employee successfully");
 		}else {
-			test.log(Status.FAIL, "TC_07_Test to check whether user is able to initiate appraisal for an employee");
+			test.log(Status.FAIL, "TC_07_Test to check whether user is able to view own appraisal info");
 			test.fail("Unable to view appraisal details");
 		}
 		
@@ -197,5 +203,13 @@ public class testSuitOrangeHRM {
 	public void  afterTest() {
 		extent.flush();
 	}
+	
+	@BeforeClass
+	public static void beforeClass() throws IOException {
+		
+		configProperties.initPropertyFile();
+		
+	}
+	
  
 }
