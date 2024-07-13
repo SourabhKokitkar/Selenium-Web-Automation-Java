@@ -23,9 +23,9 @@
         <include name="TC07_EmployeePerformance" />
         <include name="TC08_EmployeeCareerDevelopment" />-->
         <!--<include name="TC09_EmployeeRequestDesk" /> 
-        <include name="TC10_EmployeeRecruitment" />-->
+        <include name="TC10_EmployeeRecruitment" />
         
-      </methods>
+      </methods>-->
       
       
     </class>
