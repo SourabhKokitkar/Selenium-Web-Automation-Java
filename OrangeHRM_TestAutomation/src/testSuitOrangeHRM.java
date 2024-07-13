@@ -1,3 +1,5 @@
+
+
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -54,7 +56,7 @@ public class testSuitOrangeHRM {
 		
 	}
 	
-	@Test(groups = {"Sanity","Employee Management"})
+	@Test(groups = {"Sanity","Employee Management"}, priority = -1)
 	public void TC03_EmployeeManagement(){
 		
 		ExtentTest test = extent.createTest("TC_03_Employee Management");
@@ -207,7 +209,7 @@ public class testSuitOrangeHRM {
 	@BeforeClass
 	public static void beforeClass() throws IOException {
 		
-		configProperties.initPropertyFile();
+		Variables.configProperties.initPropertyFile();
 		
 	}
 	

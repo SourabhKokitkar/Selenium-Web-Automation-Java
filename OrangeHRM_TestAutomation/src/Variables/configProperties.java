@@ -9,7 +9,7 @@ public class configProperties {
 	
 	public static Properties property;
 	
-	private static String configpath = "config/config.Properties";
+	private static String configpath = "C:\\Users\\PRiNCE\\git\\repository\\OrangeHRM_TestAutomation\\config\\config01.properties";
 	
 	public static void initPropertyFile() throws IOException {
 		
