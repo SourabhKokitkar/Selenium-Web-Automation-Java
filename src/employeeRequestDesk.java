@@ -131,7 +131,7 @@ import java.util.regex.*;
 	    	driver.findElement(By.xpath("//a[@data-automation-id='menu_Request Desk_viewMyGeneralRequests']")).click();
 	    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 	       	try {
-	    		Thread.sleep(5000);
+	    		Thread.sleep(10000);
 	    	} catch (InterruptedException e) {
 	    		// TODO Auto-generated catch block
 	    		e.printStackTrace();

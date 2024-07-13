@@ -37,7 +37,7 @@ public class employeeManagement {
 	
 	public static String dateManipulation(int addMonth) {
 		
-		DateFormat dateFormat = new SimpleDateFormat("Y-dd-MM");
+		DateFormat dateFormat = new SimpleDateFormat("Y-MM-dd");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MONTH, addMonth);
 		String result = dateFormat.format(cal.getTime());
@@ -298,22 +298,26 @@ public class employeeManagement {
 		driver.findElement(By.xpath("(//input[@id='date_of_permanency']/ancestor::div[@name='dateForm']//div[@role='gridcell' and text()='1'])[1]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//Job title
-		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@role='combobox']")).click();
+//		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@role='combobox']")).click();
+		driver.findElement(By.xpath("//div[@id='job_title_id']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.findElement(By.xpath("//span[normalize-space()='Intern - Software Developer']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//employment status
-		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@data-id='employment_status_id']")).click();
+//		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@data-id='employment_status_id']")).click();
+		driver.findElement(By.xpath("//div[@id='employment_status_id']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.findElement(By.xpath("//span[normalize-space()='Full-Time Contract']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//job category
-		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@data-id='job_category_id']")).click();
+//		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@data-id='job_category_id']")).click();
+		driver.findElement(By.xpath("//div[@id='job_category_id']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.findElement(By.xpath("//span[normalize-space()='Professionals']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//sub unit
-		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@data-id='subunit_id']")).click();
+//		driver.findElement(By.xpath("//div[@class='dropdown bootstrap-select select-dropdown']//button[@data-id='subunit_id']")).click();
+		driver.findElement(By.xpath("//div[@id='subunit_id']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.findElement(By.xpath("//span[normalize-space()='Quality assurance (QA)']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -322,7 +326,7 @@ public class employeeManagement {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		//Date formatting for contract start and end date
-		DateFormat dateFormat = new SimpleDateFormat("Y-dd-MM");
+		DateFormat dateFormat = new SimpleDateFormat("Y-MM-dd");
 		Date date = new Date();
 		
 		//Contract Start Date		

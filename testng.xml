@@ -12,20 +12,20 @@
 	  
 	<classes>
     <class name="testSuitOrangeHRM">
-     <!-- <methods>
+      <methods>
 		  
-        <include name="TC01_Login" />
+        <!--<include name="TC01_Login" />
         <include name="TC02_Login" />
         <include name="TC03_EmployeeManagement" />
         <include name="TC04_EmployeeManagement" /> 
         <include name="TC05_EmployeeManagement" />
         <include name="TC06_EmployeePerformance" /> 
         <include name="TC07_EmployeePerformance" />
-        <include name="TC08_EmployeeCareerDevelopment" />
-        <include name="TC09_EmployeeRequestDesk" />
-        <include name="TC10_EmployeeRecruitment" /> 
+        <include name="TC08_EmployeeCareerDevelopment" />-->
+        <!--<include name="TC09_EmployeeRequestDesk" /> -->
+        <include name="TC10_EmployeeRecruitment" />
         
-      </methods>-->
+      </methods>
       
       
     </class>

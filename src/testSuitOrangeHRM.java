@@ -56,7 +56,7 @@ public class testSuitOrangeHRM {
 		
 	}
 	
-	@Test(groups = {"Sanity","Employee Management"}, priority = -1)
+	@Test(groups = {"Sanity","Employee Management"})
 	public void TC03_EmployeeManagement(){
 		
 		ExtentTest test = extent.createTest("TC_03_Employee Management");

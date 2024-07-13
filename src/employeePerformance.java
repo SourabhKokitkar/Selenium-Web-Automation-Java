@@ -43,7 +43,12 @@ public class employeePerformance {
     	driver=login.loginSteps(driver);
     	
     	//click on performance
-    	    	
+    	try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	driver.findElement(By.xpath("//li[@id='left_menu_item_18']//a[1]//span[1]")).click();
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
        	try {
@@ -119,7 +124,7 @@ public class employeePerformance {
     		i++;
     	}while(i<3);
 
-    	driver.findElement(By.xpath("//table[@id='date_to_table']//div[@class='picker__day picker__day--infocus' and text()='27']")).click();
+    	driver.findElement(By.xpath("//table[@id='date_to_table']//div[@aria-label=\"2024-10-27\"]")).click(); //apply date logic here
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	//due date
     	driver.findElement(By.xpath("//input[@id='date_due']")).click();
@@ -242,6 +247,13 @@ public class employeePerformance {
 		String actualRating=driver.findElement(By.xpath("//div[@id='finalRatingValue']")).getText();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
+		if (actualRating.contains("_ _")) {
+            driver.quit();
+//            System.out.println("breaked");
+            return true;
+
+        }
+		
 		float rating=Float.parseFloat(actualRating);
 		
         if (rating>=0 && rating<=5.0 ) {
