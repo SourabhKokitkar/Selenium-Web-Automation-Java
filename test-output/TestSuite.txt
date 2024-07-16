@@ -1,69 +1,69 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 336.134 sec <<< FAILURE! - in TestSuite
-TC03_EmployeeManagement(testSuitOrangeHRM)  Time elapsed: 74.182 sec  <<< FAILURE!
+Tests run: 10, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 366.066 sec <<< FAILURE! - in TestSuite
+TC06_EmployeePerformance(testSuitOrangeHRM)  Time elapsed: 31.993 sec  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=126.0.6478.127)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [284e8a9b0936d010710268f0387a1741, clickElement {id=f.CB5EC60620E35C601D55D09002F1363A.d.5A6A7714521667D581D669BA4764D687.e.54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64963/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (284e8a9b0936d010710268f0387a1741)] -> xpath: //li[@id='left_menu_item_18']//a[1]//span[1]]
+Session ID: 284e8a9b0936d010710268f0387a1741
+	at testSuitOrangeHRM.TC06_EmployeePerformance(testSuitOrangeHRM.java:115)
+
+TC07_EmployeePerformance(testSuitOrangeHRM)  Time elapsed: 27.626 sec  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=126.0.6478.127)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [49fc399cb364d894483fd3ed8082cd2a, clickElement {id=f.CE34A7B195E23793AB2F8D6A0626D14B.d.17A98E90B22B0FF2F065BB785F006E43.e.50}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64985/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (49fc399cb364d894483fd3ed8082cd2a)] -> xpath: //li[@id='left_menu_item_18']//a[1]//span[1]]
+Session ID: 49fc399cb364d894483fd3ed8082cd2a
+	at testSuitOrangeHRM.TC07_EmployeePerformance(testSuitOrangeHRM.java:133)
+
+TC08_EmployeeCareerDevelopment(testSuitOrangeHRM)  Time elapsed: 27.834 sec  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=126.0.6478.127)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5ea2a4c5b2724889c65cad70641db9b8, clickElement {id=f.CC19461C1282842D2BB27EC1C4AA8B06.d.A86444B83847BA54E2A175946CE24C99.e.50}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65009}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65009/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5ea2a4c5b2724889c65cad70641db9b8)] -> xpath: //a[@data-automation-id='menu_succession & development_individualDevelopmentPlans' and @class=' main-menu-item-1']]
+Session ID: 5ea2a4c5b2724889c65cad70641db9b8
+	at testSuitOrangeHRM.TC08_EmployeeCareerDevelopment(testSuitOrangeHRM.java:151)
+
+TC09_EmployeeRequestDesk(testSuitOrangeHRM)  Time elapsed: 27.844 sec  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=126.0.6478.127)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8373d41d554e1a0c77d662c637671ee9, clickElement {id=f.AB60D1EFAE4CBCA9852FB7E494966174.d.64E2A9CAC6282BF770090CBA4A450827.e.54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65040}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65040/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8373d41d554e1a0c77d662c637671ee9)] -> xpath: //a[@data-automation-id='menu_Request Desk_addRequest' and @class=' main-menu-item-1']]
+Session ID: 8373d41d554e1a0c77d662c637671ee9
+	at testSuitOrangeHRM.TC09_EmployeeRequestDesk(testSuitOrangeHRM.java:169)
+
+TC10_EmployeeRecruitment(testSuitOrangeHRM)  Time elapsed: 48.926 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='dropdown bootstrap-select select-dropdown']//button[@role='combobox']"}
+no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@class='oxd-table-cell-link'])[1]"}
   (Session info: chrome=126.0.6478.127)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [662fbb24f2271b87e8048919748b6924, findElement {using=xpath, value=//div[@class='dropdown bootstrap-select select-dropdown']//button[@role='combobox']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64154}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64154/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 662fbb24f2271b87e8048919748b6924
-	at testSuitOrangeHRM.TC03_EmployeeManagement(testSuitOrangeHRM.java:64)
-
-TC06_EmployeePerformance(testSuitOrangeHRM)  Time elapsed: 27.478 sec  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [34aab75859357cb1dd01897b75b131a2, clickElement {id=f.DFEE80FA27D835BCE5F24F7ADA314135.d.5EC963D6C91D53A528805C8CA2FD6A9B.e.50}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64292}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64292/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (34aab75859357cb1dd01897b75b131a2)] -> xpath: //li[@id='left_menu_item_18']//a[1]//span[1]]
-Session ID: 34aab75859357cb1dd01897b75b131a2
-	at testSuitOrangeHRM.TC06_EmployeePerformance(testSuitOrangeHRM.java:115)
-
-TC07_EmployeePerformance(testSuitOrangeHRM)  Time elapsed: 31.447 sec  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [313522501577e46c2f6548ed1e02d0d7, clickElement {id=f.3A43DC966784F43C107B82EC2C7ADA36.d.269B9A35210C2AC792E52E558C3135F5.e.50}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64314}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64314/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (313522501577e46c2f6548ed1e02d0d7)] -> xpath: //li[@id='left_menu_item_18']//a[1]//span[1]]
-Session ID: 313522501577e46c2f6548ed1e02d0d7
-	at testSuitOrangeHRM.TC07_EmployeePerformance(testSuitOrangeHRM.java:133)
-
-TC08_EmployeeCareerDevelopment(testSuitOrangeHRM)  Time elapsed: 28.071 sec  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d039c1fab073a7be97ad7fb79521cf48, clickElement {id=f.D4B7CB915938194D7C5829B8E2A36D0E.d.FED535CDB9F376E6AE3F8DC0EB9F5A4E.e.50}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64336}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64336/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (d039c1fab073a7be97ad7fb79521cf48)] -> xpath: //a[@data-automation-id='menu_succession & development_individualDevelopmentPlans' and @class=' main-menu-item-1']]
-Session ID: d039c1fab073a7be97ad7fb79521cf48
-	at testSuitOrangeHRM.TC08_EmployeeCareerDevelopment(testSuitOrangeHRM.java:151)
-
-TC09_EmployeeRequestDesk(testSuitOrangeHRM)  Time elapsed: 30.128 sec  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [edd718e7af7812b0af499ca85e29f3e8, clickElement {id=f.A27F1BDFE1DAAF85116E6BF81D9B7825.d.956C5AC6C447AB68A522EC76CBF799F1.e.50}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64364}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64364/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (edd718e7af7812b0af499ca85e29f3e8)] -> xpath: //a[@data-automation-id='menu_Request Desk_addRequest' and @class=' main-menu-item-1']]
-Session ID: edd718e7af7812b0af499ca85e29f3e8
-	at testSuitOrangeHRM.TC09_EmployeeRequestDesk(testSuitOrangeHRM.java:169)
+Command: [9c250acaff43baabad78bbac212f1a14, findElement {value=(//a[@class='oxd-table-cell-link'])[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65066}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65066/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c250acaff43baabad78bbac212f1a14
+	at testSuitOrangeHRM.TC10_EmployeeRecruitment(testSuitOrangeHRM.java:186)
 

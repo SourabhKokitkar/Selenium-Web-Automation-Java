@@ -9,6 +9,7 @@
           <include name="beforeClass"/>
           <include name="TC10_EmployeeRecruitment"/>
           <include name="beforeTest"/>
+          <include name="TC06_EmployeePerformance"/>
         </methods>
       </class> <!-- testSuitOrangeHRM -->
     </classes>

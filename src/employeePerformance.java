@@ -1,6 +1,7 @@
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -166,12 +167,22 @@ public class employeePerformance {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	for(int k=1;k<28;) {
-    		
-    		String s = "(//a[@data-rating-text='4.5'])["+k+"]";
-    		driver.findElement(By.xpath(s)).click();
-    		k+=2;
-    	}
+    	
+    	    try {
+    	    	for(int k=1;k<28;) {
+    	    		
+    	    		String s = "(//a[@data-rating-text='4.5'])["+k+"]";
+    	    		driver.findElement(By.xpath(s)).click();
+    	    		k+=2;
+    	    	}
+    	        
+    	    } catch (NoSuchElementException e) {
+    	        return false;
+    	    }
+	
+    	
+
+    	
     	
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     	//back to homepage
