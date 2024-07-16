@@ -1,6 +1,7 @@
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.support.ui.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,8 +38,21 @@ public boolean employeeCareerDevelopment08(){
     	driver=login.loginSteps(driver);
     	
     	//click on career development
-    	    	
-    	driver.findElement(By.xpath("//a[@data-automation-id='menu_succession & development_individualDevelopmentPlans' and @class=' main-menu-item-1']")).click();
+    	try {
+			Thread.sleep(8000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	try {
+    		
+    		driver.findElement(By.xpath("//a[@data-automation-id='menu_succession & development_individualDevelopmentPlans' and @class=' main-menu-item-1']")).click();
+	        
+	    } catch (ElementNotInteractableException e) {
+	        return false;
+	    }
+    	
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
        	try {
     		Thread.sleep(15000);

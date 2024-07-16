@@ -1,6 +1,7 @@
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.*;
 import org.openqa.selenium.WebDriver;
@@ -45,12 +46,19 @@ public class employeePerformance {
     	
     	//click on performance
     	try {
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	driver.findElement(By.xpath("//li[@id='left_menu_item_18']//a[1]//span[1]")).click();
+    	try {
+    		
+    		driver.findElement(By.xpath("//li[@id='left_menu_item_18']//a[1]//span[1]")).click();
+	        
+	    } catch (ElementNotInteractableException e) {
+	        return false;
+	    }
+    	
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
        	try {
     		Thread.sleep(6000);
@@ -112,7 +120,12 @@ public class employeePerformance {
     	//to
     	driver.findElement(By.xpath("//input[@id='date_to']")).click();
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-    	
+    	try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	int i=0;
     	do {
     		driver.findElement(By.xpath("//div[@title='Next month' and  @aria-controls='date_to_table']")).click();
@@ -130,6 +143,12 @@ public class employeePerformance {
     	//due date
     	driver.findElement(By.xpath("//input[@id='date_due']")).click();
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    	try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	int j=0;
     	do {
     		driver.findElement(By.xpath("//div[@title='Next month' and @aria-controls='date_due_table']")).click();
@@ -230,8 +249,21 @@ public class employeePerformance {
     	driver=login.loginSteps(driver);
     	
     	//click on performance
-    	    	
-    	driver.findElement(By.xpath("//li[@id='left_menu_item_18']//a[1]//span[1]")).click();
+    	try {
+			Thread.sleep(8000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	try {
+    		
+    		driver.findElement(By.xpath("//li[@id='left_menu_item_18']//a[1]//span[1]")).click();
+	        
+	    } catch (ElementNotInteractableException e) {
+	        return false;
+	    }
+    	
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
        	try {
     		Thread.sleep(6000);

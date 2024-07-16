@@ -1,6 +1,7 @@
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.support.ui.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,7 +53,21 @@ import java.util.regex.*;
 	    	driver=login.loginSteps(driver);
 	    	
 	    	//click on request desk
-	    	driver.findElement(By.xpath("//a[@data-automation-id='menu_Request Desk_addRequest' and @class=' main-menu-item-1']")).click();
+	    	try {
+				Thread.sleep(8000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	
+	    	try {
+	    		
+	    		driver.findElement(By.xpath("//a[@data-automation-id='menu_Request Desk_addRequest' and @class=' main-menu-item-1']")).click();
+		        
+		    } catch (ElementNotInteractableException e) {
+		        return false;
+		    }
+	    	
 	    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	       	try {
 	    		Thread.sleep(15000);
