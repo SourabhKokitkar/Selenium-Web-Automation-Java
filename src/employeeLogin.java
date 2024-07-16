@@ -18,6 +18,7 @@ import java.time.Duration;
 
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -146,7 +147,18 @@ public boolean login02(){
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 //        String url1 = driver.getCurrentUrl();
-		String actualPrompt=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
+        try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+        	String actualPrompt=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+//		String actualPrompt=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
         if (actualPrompt.contains("Invalid Credentials") || actualPrompt.contains("Please solve the problem to proceed.")) {
