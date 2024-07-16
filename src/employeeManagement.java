@@ -2,6 +2,7 @@
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -352,7 +353,12 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath("//input[@class='select-dropdown']")).click();
+		try {
+			driver.findElement(By.xpath("//input[@class='select-dropdown']")).click();
+		} catch (StaleElementReferenceException e) {
+			return false;
+		}
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.findElement(By.xpath("//span[normalize-space()='Onboarding - India']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));

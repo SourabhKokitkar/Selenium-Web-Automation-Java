@@ -26,7 +26,7 @@ public class employeeLogin {
 	
 //	ExtentSparkReporter spark = new ExtentSparkReporter("extentReport.html");
 //	ExtentReports extent = new ExtentReports();
-	public void highlightElement(WebDriver driver, WebElement element) {
+/*	public void highlightElement(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	    // Create a pulsating effect around the element
 	    js.executeScript(
@@ -50,7 +50,7 @@ public class employeeLogin {
 	        "setTimeout(function() { document.body.removeChild(pulse); }, 1500);", // Removing the pulse from the DOM
 	        element
 	    );
-	}
+	}*/
 	
 	public WebDriver loginSteps(WebDriver driver) {
 		
@@ -63,26 +63,26 @@ public class employeeLogin {
         
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
-        highlightElement(driver, driver.findElement(By.xpath("//input[@name='txtUsername']")));
+//        highlightElement(driver, driver.findElement(By.xpath("//input[@name='txtUsername']")));
         driver.findElement(By.xpath("//input[@name='txtUsername']")).sendKeys(configProperties.property.getProperty("ValidUsername1"));
         try {
-			Thread.sleep(1500);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        highlightElement(driver, driver.findElement(By.xpath("//input[@name='txtPassword']")));
+//        highlightElement(driver, driver.findElement(By.xpath("//input[@name='txtPassword']")));
         driver.findElement(By.xpath("//input[@name='txtPassword']")).sendKeys(configProperties.property.getProperty("ValidPass1"));
         try {
-			Thread.sleep(1500);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        highlightElement(driver, driver.findElement(By.xpath("//button[@type='submit']")));
+//        highlightElement(driver, driver.findElement(By.xpath("//button[@type='submit']")));
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         try {
-			Thread.sleep(1500);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
