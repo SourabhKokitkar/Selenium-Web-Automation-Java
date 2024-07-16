@@ -45,7 +45,7 @@ public class employeeManagement {
 		return result;
 	}
 	
-	public void highlightElement(WebDriver driver, WebElement element) {
+	/*public void highlightElement(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	    // Create a pulsating effect around the element
 	    js.executeScript(
@@ -69,7 +69,7 @@ public class employeeManagement {
 	        "setTimeout(function() { document.body.removeChild(pulse); }, 1500);", // Removing the pulse from the DOM
 	        element
 	    );
-	}
+	}*/
     public boolean employeeManagement03(){
 		
 		ExtentTest test = extent.createTest("Login");
@@ -82,14 +82,23 @@ public class employeeManagement {
 		driver=login.loginSteps(driver);
 		
 		//click Employee list button
-		highlightElement(driver, driver.findElement(By.xpath("//a[@data-automation-id='menu_pim_viewEmployeeList' and @class='top-level-menu-item']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//a[@data-automation-id='menu_pim_viewEmployeeList' and @class='top-level-menu-item']")));
 		driver.findElement(By.xpath("//a[@data-automation-id='menu_pim_viewEmployeeList' and @class='top-level-menu-item']")).click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		//click '+' icon
-		highlightElement(driver, driver.findElement(By.xpath("//div[@data-tooltip='Add Employee']//i[@class='material-icons'] ")));
-		driver.findElement(By.xpath("//div[@data-tooltip='Add Employee']//i[@class='material-icons'] ")).click();
-		highlightElement(driver, driver.findElement(By.xpath("//div[@data-tooltip='Add Employee']//i[@class='material-icons'] ")));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//		highlightElement(driver, driver.findElement(By.xpath("//div[@data-tooltip='Add Employee']//i[@class='material-icons'] ")));
+		try {
+			Thread.sleep(10000);
+			driver.findElement(By.xpath("//div[@data-tooltip='Add Employee']//i[@class='material-icons'] ")).click();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+//		highlightElement(driver, driver.findElement(By.xpath("//div[@data-tooltip='Add Employee']//i[@class='material-icons'] ")));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		
 		try {
 			Thread.sleep(10000);
@@ -101,7 +110,7 @@ public class employeeManagement {
 		driver.switchTo().defaultContent();
 		
 		//Enter Firstname
-		highlightElement(driver, driver.findElement(By.xpath("//input[@id='first-name-box']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//input[@id='first-name-box']")));
 		driver.findElement(By.xpath("//input[@id='first-name-box']")).sendKeys(configProperties.property.getProperty("FirstName1"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		try {
@@ -111,7 +120,7 @@ public class employeeManagement {
 			e.printStackTrace();
 		}
 		//Enter Middlename
-		highlightElement(driver, driver.findElement(By.xpath("//input[@id='middle-name-box']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//input[@id='middle-name-box']")));
 		driver.findElement(By.xpath("//input[@id='middle-name-box']")).sendKeys(configProperties.property.getProperty("MiddleName1"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		try {
@@ -121,7 +130,7 @@ public class employeeManagement {
 			e.printStackTrace();
 		}
 		//Enter Lastname
-		highlightElement(driver, driver.findElement(By.xpath("//input[@id='last-name-box']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//input[@id='last-name-box']")));
 		driver.findElement(By.xpath("//input[@id='last-name-box']")).sendKeys(configProperties.property.getProperty("LastName1"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		try {
@@ -131,7 +140,7 @@ public class employeeManagement {
 			e.printStackTrace();
 		}
 		//Enter joined date
-		highlightElement(driver, driver.findElement(By.xpath("//button[@class='btn date-picker-button']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//button[@class='btn date-picker-button']")));
 		driver.findElement(By.xpath("//button[@class='btn date-picker-button']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.findElement(By.xpath("//div[@class='picker__day picker__day--infocus' and text()='1']")).click();
@@ -143,7 +152,7 @@ public class employeeManagement {
 			e.printStackTrace();
 		}
 		//Selecting Location
-		highlightElement(driver, driver.findElement(By.xpath("//div[@class='input-group-append']//i[@class='material-icons' and text()='arrow_drop_down']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//div[@class='input-group-append']//i[@class='material-icons' and text()='arrow_drop_down']")));
 		driver.findElement(By.xpath("//div[@class='input-group-append']//i[@class='material-icons' and text()='arrow_drop_down']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.findElement(By.xpath("//span[@class='text' and text()='India Office']")).click();
@@ -154,7 +163,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//button[@id='modal-save-button']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//button[@id='modal-save-button']")));
 		driver.findElement(By.xpath("//button[@id='modal-save-button']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		try {
@@ -171,7 +180,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//div[@class='input-field col s12 m12 l4']//input[@id='ssn']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//div[@class='input-field col s12 m12 l4']//input[@id='ssn']")));
 		driver.findElement(By.xpath("//div[@class='input-field col s12 m12 l4']//input[@id='ssn']")).sendKeys(configProperties.property.getProperty("AadharSSN"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
@@ -181,7 +190,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//input[@id='emp_birthday']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//input[@id='emp_birthday']")));
 		driver.findElement(By.xpath("//input[@id='emp_birthday']")).sendKeys(configProperties.property.getProperty("Emp_DOB"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		//Marital Status
@@ -191,7 +200,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//div[@id='emp_marital_status_inputfileddiv']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//div[@id='emp_marital_status_inputfileddiv']")));
 		driver.findElement(By.xpath("//div[@id='emp_marital_status_inputfileddiv']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		try {
@@ -200,7 +209,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//span[normalize-space()='Married']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//span[normalize-space()='Married']")));
 
 		try {
 			Thread.sleep(800);
@@ -223,7 +232,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//div[@id='emp_gender_inputfileddiv']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//div[@id='emp_gender_inputfileddiv']")));
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -238,7 +247,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//span[normalize-space()='Male']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//span[normalize-space()='Male']")));
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -255,7 +264,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//div[@id='nation_code_inputfileddiv']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//div[@id='nation_code_inputfileddiv']")));
 		driver.findElement(By.xpath("//div[@id='nation_code_inputfileddiv']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
@@ -265,7 +274,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//span[normalize-space()='Indian']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//span[normalize-space()='Indian']")));
 		driver.findElement(By.xpath("//span[normalize-space()='Indian']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
@@ -276,7 +285,7 @@ public class employeeManagement {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		highlightElement(driver, driver.findElement(By.xpath("//button[@ng-show='!vm.showFinishButton']")));
+//		highlightElement(driver, driver.findElement(By.xpath("//button[@ng-show='!vm.showFinishButton']")));
 		driver.findElement(By.xpath("//button[@ng-show='!vm.showFinishButton']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		
