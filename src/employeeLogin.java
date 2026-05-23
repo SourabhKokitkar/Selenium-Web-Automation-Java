@@ -148,7 +148,7 @@ public boolean login02(){
 		
 //        String url1 = driver.getCurrentUrl();
         try {
-			Thread.sleep(5000);
+			Thread.sleep(6000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -158,7 +158,7 @@ public boolean login02(){
 		} catch (NoSuchElementException e) {
 			return false;
 		}
-		String actualPrompt=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
+		String actualPrompt=driver.findElement(By.xpath("//div[@class='toast-message1']")).getText();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
         if (actualPrompt.contains("Invalid Credentials") || actualPrompt.contains("Please solve the problem to proceed.")) {
