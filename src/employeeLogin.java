@@ -161,7 +161,7 @@ public boolean login02(){
 		String actualPrompt=driver.findElement(By.xpath("//div[@class='toast-message1']")).getText();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         
-        if (actualPrompt.contains("Invalid Credentials") || actualPrompt.contains("Please solve the problem to proceed.")) {
+        if (actualPrompt.contains("Invalid Credentials") || actualPrompt.contains("Please solve the problem to proceed 1.")) {
             driver.quit();
             return true;
 

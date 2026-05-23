@@ -83,7 +83,7 @@ public class employeeManagement {
 		
 		//click Employee list button
 //		highlightElement(driver, driver.findElement(By.xpath("//a[@data-automation-id='menu_pim_viewEmployeeList' and @class='top-level-menu-item']")));
-		driver.findElement(By.xpath("//a[@data-automation-id='menu_pim_viewEmployeeList' and @class='top-level-menu-item']")).click();
+		driver.findElement(By.xpath("//a[@data-automation-id='menu_pim_viewEmployeeList' and @class='top-level-menu-item1']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		//click '+' icon
 //		highlightElement(driver, driver.findElement(By.xpath("//div[@data-tooltip='Add Employee']//i[@class='material-icons'] ")));
